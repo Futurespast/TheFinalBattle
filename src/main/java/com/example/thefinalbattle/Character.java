@@ -9,6 +9,14 @@ public abstract class Character {
     protected boolean poisoned =false;
     protected int poisonValue;
     protected int blindValue;
+    protected boolean Dead=false;
+
+    public boolean isDead(){
+        if(health<=0){
+            return true;
+        }
+        return false;
+    }
 
     //gets name of the character
     public String getName() {
@@ -65,12 +73,13 @@ public abstract class Character {
     }
 
     //this method allows the character to receive damage
-    public void takeDamage(int attack){
+    public boolean takeDamage(int attack){
         health-=attack;
         if(isPoisoned()){
             health-=poisonValue;
             poisonCounter++;
         }
+       return isDead();
     }
 
 
