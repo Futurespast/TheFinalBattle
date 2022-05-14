@@ -6,26 +6,50 @@ public abstract class Character {
     protected int blindCounter;
     protected int poisonCounter;
     protected boolean blinded =false;
+    protected boolean poisoned =false;
+    protected int poisonValue;
+    protected int blindValue;
+
+    //gets name of the character
     public String getName() {
         return name;
     }
 
+    //gets the current health of the character
     public int getHealth() {
         return health;
     }
-    public boolean isBlind(){
-        if(blinded==true && blindCounter<=5){
+
+    //checks to see if character is poisoned
+    public boolean isPoisoned() {
+        if(poisoned==true && poisonCounter<=5){
             return true;
         }
-        if (blinded==true && blindCounter>5){
+        if (poisoned==true && poisonCounter>5){
+            poisoned=false;
+            poisonCounter=0;
+            return false;
+        }
+        return false;
+    }
+
+    //checks to see if the character is blind
+    public boolean isBlind(){
+        if(blinded==true && blindCounter<=blindValue){
+            return true;
+        }
+        if (blinded==true && blindCounter>blindValue){
             blinded=false;
             blindCounter=0;
             return false;
         }
         return false;
     }
+
+    //this method allows the character to attack
     public int attack(int damage, int accuracy) {
         if (isBlind()){
+            blindCounter++;
             return 0;
         }
         int temp = (int) (Math.random() * 10);
@@ -33,6 +57,19 @@ public abstract class Character {
             return damage;
         } else {
             return 0;
+        }
+    }
+
+    public int getPoisonValue() {
+        return poisonValue;
+    }
+
+    //this method allows the character to receive damage
+    public void takeDamage(int attack){
+        health-=attack;
+        if(isPoisoned()){
+            health-=poisonValue;
+            poisonCounter++;
         }
     }
 
