@@ -2,7 +2,11 @@ package com.example.thefinalbattle;
 
 public class FlashBomb implements Item{
     protected int value;
-
+    protected String name;
+    public FlashBomb(int value){
+        this.value=value;
+        this.name="Flash Bomb (Blinds for "+value+" turns";
+    }
     @Override
     public int getValue() {
         return value;
@@ -13,5 +17,9 @@ public class FlashBomb implements Item{
         character.blindValue=value;
         character.blinded=true;
         character.blindCounter=0;
+    }
+
+    public String getName() {
+        return name;
     }
 }

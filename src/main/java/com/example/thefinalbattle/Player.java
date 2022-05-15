@@ -1,3 +1,5 @@
+package com.example.thefinalbattle;
+
 import com.example.thefinalbattle.Character;
 import com.example.thefinalbattle.Enemy;
 import com.example.thefinalbattle.Item;
@@ -16,6 +18,11 @@ public Player(String name,int health) {
         this.sword=sword;
     }
 
+    public Sword getSword() {
+        return sword;
+    }
+
+
     public void removeItem(int index){
     Items.remove(index);
     }
@@ -31,12 +38,13 @@ public Player(String name,int health) {
     // AS OF NOW, THE USER IS NOT BEING TAKEN INTO CONSIDERATION IF THE CAPACITY IS FULL
     public void addItem(Item item){
     if (isMaxInventorySize()){
-        removeItem(3);
+        removeItem(2);
     }
     Items.add(item);
     }
-   public void useItem(int index, Enemy enemy){
-    Items.get(index).use(enemy);
+   public void useItem(int index, Character character){
+    Items.get(index).use(character);
+    Items.remove(index);
    }
 
 }

@@ -30,10 +30,10 @@ public abstract class Character {
 
     //checks to see if character is poisoned
     public boolean isPoisoned() {
-        if(poisoned==true && poisonCounter<=5){
+        if(poisoned==true && poisonCounter<5){
             return true;
         }
-        if (poisoned==true && poisonCounter>5){
+        if (poisoned==true && poisonCounter>=5){
             poisoned=false;
             poisonCounter=0;
             return false;
@@ -61,7 +61,7 @@ public abstract class Character {
             return 0;
         }
         int temp = (int) (Math.random() * 10);
-        if (temp <= accuracy) {
+        if (temp <= accuracy && accuracy != 0) {
             return damage;
         } else {
             return 0;
