@@ -24,7 +24,7 @@ public Player(String name,int health) {
 
 
     public void removeItem(int index){
-    Items.remove(index);
+        Items.remove(index);
     }
     public boolean isMaxInventorySize(){
     if (Items.size()==3){
@@ -36,11 +36,13 @@ public Player(String name,int health) {
 
     // THIS IS ONLY TEMPORARY, ONCE I START IMPLEMENTING JAVAFX I WILL CHANGE THIS OR MOVE THIS TO MAIN
     // AS OF NOW, THE USER IS NOT BEING TAKEN INTO CONSIDERATION IF THE CAPACITY IS FULL
-    public void addItem(Item item){
-    if (isMaxInventorySize()){
-        removeItem(2);
-    }
-    Items.add(item);
+    public boolean addItem(Item item){
+        if (isMaxInventorySize()){
+            return false;
+        }
+        Items.add(item);
+
+        return true;
     }
    public void useItem(int index, Character character){
     Items.get(index).use(character);

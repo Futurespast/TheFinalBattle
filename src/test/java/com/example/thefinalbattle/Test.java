@@ -31,6 +31,11 @@ public void
     PoisonPotion poison = new PoisonPotion(5);
     player.addItem(poison);
     assertEquals(poison,player.Items.get(2));
+    
+    
+    if(!player.addItem(poison)){
+        // ask user for which item they want to remove
+    }
 }
 
     @org.junit.jupiter.api.Test
