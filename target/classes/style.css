@@ -1,0 +1,22 @@
+.menu{
+-fx-background-image: url("/menubackground.jpg");
+-fx-background-repeat: no-repeat;
+-fx-background-position: center center;
+-fx-background-size: stretch;
+}
+.title{
+-fx-font-weight: bold;
+-fx-font-size: 10em;
+}
+#settings{
+-fx-font-weight: bold;
+-fx-font-size: 8em;
+}
+.menuButtons{
+-fx-font-weight:bold;
+-fx-background-color: transparent;
+-fx-font-size:6em;
+}
+.menuButtons:hover{
+-fx-cursor:hand;
+}
