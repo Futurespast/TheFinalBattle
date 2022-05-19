@@ -73,13 +73,16 @@ public abstract class Character {
     }
 
     //this method allows the character to receive damage
-    public boolean takeDamage(int attack){
+    public int takeDamage(int attack){
+       int totaldam=0;
+       totaldam+=attack;
         health-=attack;
         if(isPoisoned()){
+            totaldam+=poisonValue;
             health-=poisonValue;
             poisonCounter++;
         }
-       return isDead();
+       return totaldam;
     }
 
 
