@@ -1,6 +1,8 @@
 package com.example.thefinalbattle;
 
 public class PoisonPotion implements Item{
+    ItemType type = ItemType.PoisonPotion;
+
     protected int value;
     protected String name;
     public PoisonPotion(int value){
@@ -21,5 +23,10 @@ public class PoisonPotion implements Item{
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public ItemType getType() {
+        return type;
     }
 }

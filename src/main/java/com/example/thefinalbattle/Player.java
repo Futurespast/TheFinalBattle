@@ -1,14 +1,9 @@
 package com.example.thefinalbattle;
 
-import com.example.thefinalbattle.Character;
-import com.example.thefinalbattle.Enemy;
-import com.example.thefinalbattle.Item;
-import com.example.thefinalbattle.Sword;
-
 import java.util.ArrayList;
 
 public class Player extends Character {
-protected ArrayList<Item> Items = new ArrayList<>(3);
+protected ArrayList<Item> items = new ArrayList<>(3);
 protected Sword sword;
 public Player(String name,int health) {
     this.health = health;
@@ -24,10 +19,10 @@ public Player(String name,int health) {
 
 
     public void removeItem(int index){
-        Items.remove(index);
+        items.remove(index);
     }
     public boolean isMaxInventorySize(){
-    if (Items.size()==3){
+    if (items.size()==3){
         return true;
     }
     return false;
@@ -40,13 +35,13 @@ public Player(String name,int health) {
         if (isMaxInventorySize()){
             return false;
         }
-        Items.add(item);
+        items.add(item);
 
         return true;
     }
    public void useItem(int index, Character character){
-    Items.get(index).use(character);
-    Items.remove(index);
+    items.get(index).use(character);
+    items.remove(index);
    }
 
 }

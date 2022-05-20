@@ -14,7 +14,7 @@ public class Test {
          assertEquals(sword,player.getSword());
          assertEquals("Sam",player.getName());
          assertEquals(100,player.getHealth());
-        assertEquals(bomb,player.Items.get(0));
+        assertEquals(bomb,player.items.get(0));
     }
 
 
@@ -30,7 +30,7 @@ public void
     player.addItem(flash);
     PoisonPotion poison = new PoisonPotion(5);
     player.addItem(poison);
-    assertEquals(poison,player.Items.get(2));
+    assertEquals(poison,player.items.get(2));
     
     
     if(!player.addItem(poison)){

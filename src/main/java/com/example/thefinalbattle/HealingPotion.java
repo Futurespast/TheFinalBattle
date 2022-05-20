@@ -1,11 +1,13 @@
 package com.example.thefinalbattle;
 
 public class HealingPotion implements Item{
+    ItemType type = ItemType.HealingPotion;
+
     protected int value;
     protected String name;
     public HealingPotion(int value){
-        this.value=value;
-        this.name="Healing potion (heals "+value+" health)";
+        this.value = value;
+        this.name = "Healing potion (heals "+value+" health)";
     }
     @Override
     public int getValue() {
@@ -18,5 +20,10 @@ public class HealingPotion implements Item{
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public ItemType getType() {
+        return type;
     }
 }

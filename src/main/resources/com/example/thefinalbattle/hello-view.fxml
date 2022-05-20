@@ -51,7 +51,7 @@
       </HBox>
       <HBox fx:id="decisions" layoutX="-4.0" layoutY="399.0" prefHeight="213.0" prefWidth="790.0">
          <children>
-            <Button fx:id="cont" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#FirstContinue" prefHeight="85.0" prefWidth="132.0" text="Continue" />
+            <Button fx:id="cont" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Scene1" prefHeight="85.0" prefWidth="132.0" text="Continue" />
          </children>
       </HBox>
    </children>

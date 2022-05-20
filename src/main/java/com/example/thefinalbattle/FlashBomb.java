@@ -1,6 +1,7 @@
 package com.example.thefinalbattle;
 
 public class FlashBomb implements Item{
+    ItemType type = ItemType.FlashBomb;
     protected int value;
     protected String name;
     public FlashBomb(int value){
@@ -22,4 +23,9 @@ public class FlashBomb implements Item{
     public String getName() {
         return name;
     }
+    @Override
+    public ItemType getType() {
+        return type;
+    }
+
 }
