@@ -33,7 +33,7 @@ public class HelloApplication extends Application {
         String css = getClass().getResource("/style.css").toExternalForm();
         mainmenu.getStylesheets().add(css);
         menu.getStyleClass().add("menu");
-        stage.setTitle("Test");
+        stage.setTitle("The Final Battle");
         Label title = new Label("The Final Battle");
         title.setMinWidth(MIN_WIDTH);
 
