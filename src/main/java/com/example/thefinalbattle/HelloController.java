@@ -389,6 +389,8 @@ public class HelloController {
 //runs a gameover sequence
     public void Gameover(){
         Alert gameover = new Alert(Alert.AlertType.ERROR);
+        gameover.setTitle("Gameover!");
+        gameover.setHeaderText("Gameover!");
         gameover.setContentText("You're dead! git gud ");
         ButtonType back = new ButtonType("Ok");
         gameover.getButtonTypes().setAll(back);
