@@ -29,8 +29,7 @@ public Player(String name,int health) {
     }
 
 
-    // THIS IS ONLY TEMPORARY, ONCE I START IMPLEMENTING JAVAFX I WILL CHANGE THIS OR MOVE THIS TO MAIN
-    // AS OF NOW, THE USER IS NOT BEING TAKEN INTO CONSIDERATION IF THE CAPACITY IS FULL
+
     public boolean addItem(Item item){
         if (isMaxInventorySize()){
             return false;
