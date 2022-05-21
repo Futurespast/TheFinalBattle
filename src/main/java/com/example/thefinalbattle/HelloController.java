@@ -23,7 +23,7 @@ public class HelloController {
 
     Player player;
     
-
+    //updates the label for the players health
     public void UpdatePlayerHealth(){
         playerhealth.setText(setname.getEditor().getText() + "'s health: " + player.health);
     }
@@ -52,7 +52,7 @@ public class HelloController {
         });
     }
 
-    public void Scene3(){
+    private void Scene3(){
            text.setText("A zombie burst out from the entrance!Pick which sword you want: Sword 1 damage:50 accuracy:50%, Sword 2: damage:30 accuracy:90%, Sword 3: damage 100 accuracy 10% ");
            Zombie zombie = new Zombie("zombie",50,10,4);
            enemyhealth.setText(zombie.name+"'s health: "+zombie.health);
@@ -101,7 +101,7 @@ public class HelloController {
         });
        }
        
-       public void Scene4(){
+       private void Scene4(){
             text.setText("You defeated the zombie! Good job. You enter the fortress, and find a chest with a healing potion inside. You decide to take it and put it into your backpack.");
             player.items.add(new HealingPotion(30));
 
@@ -386,7 +386,7 @@ public class HelloController {
 
     }
 
-
+//runs a gameover sequence
     public void Gameover(){
         Alert gameover = new Alert(Alert.AlertType.ERROR);
         gameover.setContentText("You're dead! git gud ");
