@@ -1,7 +1,7 @@
 # TheFinalBattle
 This is a short text based rpg game developped completely in Java and Javafx <br>
 
-I actually faced a massive challange of figuring out how to handle the logic of the game and also just amking the GUI for this game which is embarrassing since this is  mostly text based. I hope to add actual settings like sound and window resizing, as well as just making the game longer.  
+I actually faced a massive challange of figuring out how to handle the logic of the game and also just making the GUI for this game which is embarrassing since this is  mostly text based. I hope to add actual settings like sound and window resizing, as well as just making the game longer.  
 
 The following is the UML diagram for the game.
 ![UMLJava (1)](https://user-images.githubusercontent.com/104465572/169670019-b634d7a9-9596-441d-88d5-792404a688ed.png)
